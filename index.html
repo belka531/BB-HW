@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    <style>
+      img{
+        border-radius: 10px;
+        border: 1px solid grey;
+        margin-left: 15px;
+        margin-top: 15px;
+
+      }
+      table{
+        border: 1px solid gray;
+        margin-left: 15px;
+        margin-top: 15px;       
+      }
+      td, tr{
+        padding: 30px;
+        border: 1px solid gray;
+
+      }
+      input{
+        padding: 15px;
+        border: 1px solid gray;
+        margin-left: 15px;
+        margin-top: 15px;  
+      }
+      button{
+        background: lightgray;
+        border-radius: 10px;
+        margin-left: 100px;
+        padding: 10px;
+        margin-top:15px;
+        margin-bottom: 10px;
+      }
+      .conteiner{
+        width: 1300px;
+      }
+    </style>
+</head>
+<body>
+
+
+  <!-- YOUR HTML HERE -->
+<div class="conteiner">
+<p>
+  <img id="inn" src="image1.jpeg" width="300" height="300">
+  <img id="dagger" src="image2.jpg" width="300" height="300" >
+  <img id="bag" src="image3.jpg" width="300" height="300" >
+  <img id="enemy" src="image4.jpeg" width="300" height="300" >
+</p>
+<div>
+  <button id="show">Display Stats</button>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td id="name"></td>
+    </tr>
+    <tr>
+        <td>Health</td>
+        <td id="health"></td>
+      </tr>
+      <tr>
+        <td>Weapon type</td>
+          <td id="weapontype"></td>
+        </tr>
+      <tr>
+          <td>Weapon damage</td>
+          <td id="weapondamage"></td>
+      </tr>
+  </table>
+</div>
+  <div>
+    <input type="text" id="newName" placeholder="Enter name">
+  <button id="changeHero" style="margin-left: 10px">Change Hero</button>
+</div>
+</div>
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+  <div id="mocha"></div>
+
+  <script src="https://unpkg.com/chai@4.1.2/chai.js"></script>
+  <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sinon@3/pkg/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="game_logic.test.js"></script>
+
+</body>
+</html>
